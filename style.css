@@ -1,0 +1,60 @@
+/*
+  style.css - Assignment 3 (Chapter 5 focus)
+  ----------------------------------------------------------
+  References (Duckett PDF):
+    - External vs. Internal vs. Inline CSS (Chapter 10, p. 226)
+    - Cascade (specificity, order) (Chapter 11, p. 246)
+    - Inheritance (how child elements get parent properties) (Chapter 12, p. 264)
+*/
+
+/* Body styling for base inheritance (Duckett PDF, p. 264) */
+body {
+    color: #333; /* Dark gray for readability */
+    font-family: Arial, sans-serif; /* Common, readable sans-serif font */
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  /* External CSS for h1 (Duckett PDF, p. 246) */
+  h1 {
+    color: blue; /* Will be overridden by inline red color */
+    text-align: center;
+    font-size: 32px;
+  }
+  
+  /* Paragraph styling to demonstrate inheritance (Duckett PDF, p. 264) */
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter than body for contrast */
+  }
+  
+  /* Footer styling (Duckett PDF, p. 226) */
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Demonstration of cascade and specificity */
+  /* This rule will be overridden by inline style in index.html */
+  .cascade-demo {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  /* Class for inherited styling (Duckett PDF, p. 264) */
+  .parent {
+    font-family: 'Courier New', monospace;
+    color: #007bff; /* Bootstrap-like blue */
+  }
+  
+  /* Child element inheriting from .parent */
+  .parent p {
+    font-size: 14px;
+  }
+  
+  /* Observations about the cascade and inheritance */
+  /* Inline styles override both internal and external rules due to higher specificity. */
+  /* Internal CSS overrides external CSS if both have the same specificity. */
+  
